@@ -1,0 +1,21 @@
+baseURL = 'https://dark-kernel.tech/'
+languageCode = 'en-us'
+title = 'Dark-Kernel'
+linkTitle = "Navigation and Search"
+theme = 'ananke'
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+
+
+#[[menu.blog]]
+#    name = "Blog"
+#    weight = 40
+
+
+offlineSearch = true
