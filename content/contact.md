@@ -3,7 +3,7 @@ title: "Contact"
 date: 2022-11-22T20:47:40+05:30
 draft: false
 menu: contact 
-featured_image: 'who-am-i.jpg'
+featured_image: '/who-am-i.jpg'
 ---
 
 {{< rawhtml >}}
