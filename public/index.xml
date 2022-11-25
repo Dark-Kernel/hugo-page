@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Dark-Kernel</title>
-    <link>https://dark-kernel.tech/</link>
+    <link>https://patel-sumit.web.app/</link>
     <description>Recent content in Home on Dark-Kernel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Nov 2022 12:56:35 +0530</lastBuildDate><atom:link href="https://dark-kernel.tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Nov 2022 12:56:35 +0530</lastBuildDate><atom:link href="https://patel-sumit.web.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>https://dark-kernel.tech/blog/</link>
+      <link>https://patel-sumit.web.app/blog/</link>
       <pubDate>Wed, 23 Nov 2022 17:56:11 +0530</pubDate>
       
-      <guid>https://dark-kernel.tech/blog/</guid>
+      <guid>https://patel-sumit.web.app/blog/</guid>
       <description> {{ define &#34;main&#34; }} {{ }} {{ range .Paginator.Pages }} {{ .Render &#34;archive&#34; }} {{ end }} {{ template &#34;_internal/pagination.html&#34; . }} {{ end }} </description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>https://dark-kernel.tech/search/</link>
+      <link>https://patel-sumit.web.app/search/</link>
       <pubDate>Tue, 22 Nov 2022 21:03:08 +0530</pubDate>
       
-      <guid>https://dark-kernel.tech/search/</guid>
+      <guid>https://patel-sumit.web.app/search/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://dark-kernel.tech/contact/</link>
+      <link>https://patel-sumit.web.app/contact/</link>
       <pubDate>Tue, 22 Nov 2022 20:47:40 +0530</pubDate>
       
-      <guid>https://dark-kernel.tech/contact/</guid>
+      <guid>https://patel-sumit.web.app/contact/</guid>
       <description> Submit </description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://dark-kernel.tech/about/</link>
+      <link>https://patel-sumit.web.app/about/</link>
       <pubDate>Tue, 22 Nov 2022 19:54:49 +0530</pubDate>
       
-      <guid>https://dark-kernel.tech/about/</guid>
+      <guid>https://patel-sumit.web.app/about/</guid>
       <description>About me </description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>https://dark-kernel.tech/posts/my-first-post/</link>
+      <link>https://patel-sumit.web.app/posts/my-first-post/</link>
       <pubDate>Tue, 22 Nov 2022 12:56:35 +0530</pubDate>
       
-      <guid>https://dark-kernel.tech/posts/my-first-post/</guid>
+      <guid>https://patel-sumit.web.app/posts/my-first-post/</guid>
       <description>My Article First I want it </description>
     </item>
     
     <item>
       <title>My second post</title>
-      <link>https://dark-kernel.tech/posts/my-second/</link>
+      <link>https://patel-sumit.web.app/posts/my-second/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dark-kernel.tech/posts/my-second/</guid>
+      <guid>https://patel-sumit.web.app/posts/my-second/</guid>
       <description>This is my second post </description>
     </item>
     
