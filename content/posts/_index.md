@@ -1,3 +1,4 @@
 ---
-title: Blog
+title: "$ ls blogs _ "
+
 ---
