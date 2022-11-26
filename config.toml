@@ -36,10 +36,22 @@ theme = 'ananke'
 	weight = 4
 
 
-
+#[[params.ananke_socials]]
+#name = "github"
+#url = "https://github.com/Dark-Kernel"
 #[[menu.blog]]
 #    name = "Blog"
 #    weight = 40
 
+
+
+disqusShortname = 'shrtdisq'
+
+
+[params.shareButtons]
+  networks = ["facebook", "twitter", "email", "linkedin", "reddit"]
+  size = "small"
+  buttonMargin = "0.2em"
+  icon = "solid"
 
 offlineSearch = true
