@@ -87,7 +87,13 @@ hr{
 
 </style>
 <script src="https://kit.fontawesome.com/21e7e643ab.js" crossorigin="anonymous"></script>
-<form>
+<script>
+function ClearFields() {
+
+     document.getElementById("InputEmail").value = "";
+     document.getElementById("comment").value = "";
+}
+</script>
 
 <div class="container">
 <h1 align="center"> Connect with me on </h1>
@@ -114,6 +120,7 @@ hr{
 &nbsp;
 <br>
 <br>
+<form action="https://formsubmit.co/d37f54b1d10858705ecacfa503ff5646" method="POST">
 <h1 align="center">Suggestions ?</h1>
 <hr>
 &nbsp;
@@ -125,14 +132,14 @@ hr{
 
   <div class="form-border">
 	<div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required />
   </div>
   <div class="form-group">
   <!--<label for="comment">Comment:</label> -->
-  <textarea class="form-control" rows="5" id="comment" placeholder="Message..." ></textarea>
+  <textarea class="form-control" name="message" rows="5" id="comment" placeholder="Message..." ></textarea>
  </div>  
 <div class="text-center"> 
- <button type="submit" class="btn btn-primary">Submit</button>
+ <button type="submit" class="btn btn-primary" onclick="ClearFields();" >Submit</button>
 </div>
 </div>
 </form>
