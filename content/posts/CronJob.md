@@ -2,6 +2,7 @@
 title: "CronJob"
 date: 2022-07-06T19:14:11Z
 draft: false
+author: "Dark-Kernel"
 ---
 
 ## CronJob
@@ -16,20 +17,20 @@ To install bettercap use the following commands:
 
 ~ Arch
 
-`sudo pacman -S cron`
+	sudo pacman -S cron
 
 ~ Kali
 
-` sudo apt install cron `
+	sudo apt install cron
 
 
 ## Start services
 
 To enable and start the cron service use following commands:
 
-`sudo systemctl enable cronie`
+	sudo systemctl enable cronie
 
-`sudo systemctl start cronie`
+	sudo systemctl start cronie
 
 
 ## Syntax / format
@@ -57,17 +58,17 @@ To create new cron job first we need an script to run as a cron job.
 Here iam using hello world bash script. 
 And one log file to see the output.
 
-![bettercap_start](hellosh.png)
+![bettercap_start](/hellosh.png)
 
 Use following command to create :
 
-&nbsp;`sudo crontab -e`
+	sudo crontab -e
 
  >*Note : -  Here e option means edit, there are many option you can use like -l to list jobs for current user.*
 
  here this command will open vi text editor, now inside this we have to write the time and command to be run.
 
- ![bettercap_start](crontab.png)
+ ![bettercap_start](/crontab.png)
 
 >*Note : - Intead of * you can specify time according to you. and we can also use @reboot to run job at system reboot.*
 
@@ -84,7 +85,7 @@ like this you can create multiple cronjobs and add it to crontab.
 
 
 
-**Thanks for reading.**
+# **Thanks for reading.**
 
 
 

