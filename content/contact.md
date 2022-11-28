@@ -94,6 +94,27 @@ function ClearFields() {
      document.getElementById("comment").value = "";
 }
 </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  function send(){
+    emailjs.init("ZTRDqv6HWKvOzvwAG"); //please encrypted user id for malicious attacks
+  
+  var templateParams = {
+    to_name: 'sumitpatel24389@gmail.com',
+    from_name: document.getElementById("InputEmail"),
+    message_html: document.getElementById("comment")
+  };
+
+  emailjs.send('service_tunohqr', 'template_2smg9rm', templateParams, 'ZTRDqv6HWKvOzvwAG')
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+}
+</script>
+
 
 <div class="container">
 <h1 align="center"> Connect with me on </h1>
@@ -120,7 +141,8 @@ function ClearFields() {
 &nbsp;
 <br>
 <br>
-<form action="https://formsubmit.co/d37f54b1d10858705ecacfa503ff5646" method="POST">
+<form action="https://formsubmit.co/d37f54b1d10858705ecacfa503ff5646" id="contact-form" method="POST">
+<!-- <form  action="send();" id="contact-form"> -->
 <h1 align="center">Suggestions ?</h1>
 <hr>
 &nbsp;
@@ -132,14 +154,14 @@ function ClearFields() {
 
   <div class="form-border">
 	<div class="form-group">
-    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required />
+    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" />
   </div>
   <div class="form-group">
   <!--<label for="comment">Comment:</label> -->
   <textarea class="form-control" name="message" rows="5" id="comment" placeholder="Message..." ></textarea>
  </div>  
 <div class="text-center"> 
- <button type="submit" class="btn btn-primary" onclick="ClearFields();" >Submit</button>
+ <button type="submit" class="btn btn-primary" onClick="ClearFields();" >Submit</button>
 </div>
 </div>
 </form>
