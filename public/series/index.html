@@ -106,10 +106,46 @@
  
 	  
       <div class="tc-l pv3 ph3 ph4-ns" style="padding-top: 8rem;">
+		<style>
+.wrapper {
+  height: 20vh;
+   
+  display: grid;
+  place-items: center;
+}
+
+		  .typing-demo {
+			width: 16ch;
+			animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+			white-space: nowrap;
+			overflow: hidden;
+			border-right: 3px solid;
+			font-family: monospace;
+			font-size: 1em;
+		  }
+
+		  @keyframes typing {
+			from {
+			  width: 0
+			}
+		  }
+
+		  @keyframes blink {
+			50% {
+			  border-color: transparent
+			}
+		  }
+
+		</style>  
         <h1 class="f2 f-subheadline-l fw2 light-silver lh-title">
 		  
+		  <div class="wrapper">
+			<div class="typing-demo">
+		  	&nbsp;~ Series 
+			</div>
+		  </div>
 		  
-		  &nbsp;~ Series
+
         </h1>
         
       </div>

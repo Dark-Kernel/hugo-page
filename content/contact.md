@@ -84,6 +84,58 @@ hr{
 	color: black;
 }
 
+.an{
+
+ position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.an:after{
+
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: black;
+  opacity: 0;
+  display: inline-block;
+  animation: blink 0.5s linear infinite alternate;
+
+
+}
+.anim{
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typewriter{
+  from{width: 0; }
+  to{width: 11em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: white;/*rgba(255,255,255,.75)*/;}
+  to{border-right-color: transparent;}
+}
+
+
+
+
 
 </style>
 <script src="https://kit.fontawesome.com/21e7e643ab.js" crossorigin="anonymous"></script>
@@ -96,28 +148,11 @@ function ClearFields() {
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
 </script>
-<script type="text/javascript">
-  function send(){
-    emailjs.init("ZTRDqv6HWKvOzvwAG"); //please encrypted user id for malicious attacks
-  
-  var templateParams = {
-    to_name: 'sumitpatel24389@gmail.com',
-    from_name: document.getElementById("InputEmail"),
-    message_html: document.getElementById("comment")
-  };
-
-  emailjs.send('service_tunohqr', 'template_2smg9rm', templateParams, 'ZTRDqv6HWKvOzvwAG')
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-      console.log('FAILED...', error);
-    });
-}
-</script>
 
 
 <div class="container">
-<h1 align="center"> Connect with me on </h1>
+
+<h1 align="center" > Connect with me on </h1>
 <hr>
 </div>
 <div class="social" align="center">
