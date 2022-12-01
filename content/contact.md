@@ -1,5 +1,5 @@
 ---
-title: "$ ln -s you me _"
+title: "$ ln -s you ."
 date: 2022-11-22T20:47:40+05:30
 draft: false
 menu: contact 

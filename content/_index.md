@@ -39,7 +39,8 @@ body{
   opacity: 0;
   font-family: "Work Sans", sans-serif;
   margin: 0 auto auto auto;
-  background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+  /*background: linear-gradient(to right, #f8b195, #f67280, #c06c84);*/
+  background: linear-gradient(to right, #000000, #434343 );/
   font-weight: 800;
   font-size: 100px;  
   width: 430px;

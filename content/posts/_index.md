@@ -1,5 +1,5 @@
 ---
-title: "$ ls blogs _ "
+title: "$ ls blogs"
 
 ---
 

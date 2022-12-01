@@ -6,16 +6,7 @@
     <description>Recent content in Home on Dark-Kernel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Nov 2022 21:05:18 +0530</lastBuildDate><atom:link href="https://patel-sumit.web.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Empty</title>
-      <link>https://patel-sumit.web.app/posts/empty/</link>
-      <pubDate>Wed, 30 Nov 2022 21:05:18 +0530</pubDate>
-      
-      <guid>https://patel-sumit.web.app/posts/empty/</guid>
-      <description>ok checking if the page is working or not.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://patel-sumit.web.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Search</title>
       <link>https://patel-sumit.web.app/search/</link>
@@ -26,7 +17,7 @@
     </item>
     
     <item>
-      <title>$ ln -s you me _</title>
+      <title>$ ln -s you .</title>
       <link>https://patel-sumit.web.app/contact/</link>
       <pubDate>Tue, 22 Nov 2022 20:47:40 +0530</pubDate>
       
@@ -35,7 +26,7 @@
     </item>
     
     <item>
-      <title>$ whoami _</title>
+      <title>$ whoami</title>
       <link>https://patel-sumit.web.app/about/</link>
       <pubDate>Tue, 22 Nov 2022 19:54:49 +0530</pubDate>
       
@@ -50,15 +41,6 @@
       
       <guid>https://patel-sumit.web.app/blog/</guid>
       <description>About me $whoami</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://patel-sumit.web.app/posts/my-first-post/</link>
-      <pubDate>Tue, 22 Nov 2022 12:56:35 +0530</pubDate>
-      
-      <guid>https://patel-sumit.web.app/posts/my-first-post/</guid>
-      <description>My Article First I always want one blog website for myself</description>
     </item>
     
     <item>

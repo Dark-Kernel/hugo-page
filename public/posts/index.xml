@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>$ ls blogs _  on Dark-Kernel</title>
+    <title>$ ls blogs on Dark-Kernel</title>
     <link>https://patel-sumit.web.app/posts/</link>
-    <description>Recent content in $ ls blogs _  on Dark-Kernel</description>
+    <description>Recent content in $ ls blogs on Dark-Kernel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Nov 2022 21:05:18 +0530</lastBuildDate><atom:link href="https://patel-sumit.web.app/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Empty</title>
-      <link>https://patel-sumit.web.app/posts/empty/</link>
-      <pubDate>Wed, 30 Nov 2022 21:05:18 +0530</pubDate>
-      
-      <guid>https://patel-sumit.web.app/posts/empty/</guid>
-      <description>ok checking if the page is working or not.</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://patel-sumit.web.app/posts/my-first-post/</link>
-      <pubDate>Tue, 22 Nov 2022 12:56:35 +0530</pubDate>
-      
-      <guid>https://patel-sumit.web.app/posts/my-first-post/</guid>
-      <description>My Article First I always want one blog website for myself</description>
-    </item>
-    
+    <lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://patel-sumit.web.app/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
       <link>https://patel-sumit.web.app/posts/docker-post/</link>

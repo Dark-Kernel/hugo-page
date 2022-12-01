@@ -3,6 +3,7 @@ title: "Bettercap"
 date: 2022-07-02T18:16:26Z
 draft: false
 author: "Dark-Kernel"
+post_image: "https://www.bettercap.org/logo.png"
 ---
 
 ## Bettercap Framework

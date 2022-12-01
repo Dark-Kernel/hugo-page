@@ -3,6 +3,7 @@ title: "CronJob"
 date: 2022-07-06T19:14:11Z
 draft: false
 author: "Dark-Kernel"
+post_image: "cron.jpg"
 ---
 
 ## CronJob

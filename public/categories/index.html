@@ -106,7 +106,10 @@
  
 	  
       <div class="tc-l pv3 ph3 ph4-ns" style="padding-top: 8rem;">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/fira-sans.min.css"> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> 
 		<style>
+
 .wrapper {
   height: 20vh;
    
@@ -115,13 +118,32 @@
 }
 
 		  .typing-demo {
-			width: 16ch;
-			animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+			width: 11ch;
+			animation: typing 1s steps(29) ;  
 			white-space: nowrap;
 			overflow: hidden;
-			border-right: 3px solid;
-			font-family: monospace;
+			 
+			  
+			font-family: IBM Plex Mono;
+			 
+			 
+			 
 			font-size: 1em;
+			color: white;
+			position: absolute;
+		  }
+
+		  .typing-demo:after{
+
+			content: '_';
+			animation: blink .5s step-end infinite alternate;
+			height: 100%;
+			width: 40px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			color: white;
+			background: black;
 		  }
 
 		  @keyframes typing {
@@ -132,7 +154,9 @@
 
 		  @keyframes blink {
 			50% {
-			  border-color: transparent
+			   
+			  background: transparent;
+			  color: transparent;
 			}
 		  }
 
@@ -141,7 +165,7 @@
 		  
 		  <div class="wrapper">
 			<div class="typing-demo">
-		  	&nbsp;~ Categories 
+		  	~Categories 
 			</div>
 		  </div>
 		  

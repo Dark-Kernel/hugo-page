@@ -57,10 +57,10 @@ Containers are made possible by process isolation and virtualization capabilitie
    
   
 
-  
-  <header class="cover bg-top" style="background-image: url('https://patel-sumit.web.app/docker-logo.png');">
-    <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <header class="cover bg-top" >
+
+	<div class="pb3-m pb6-l bg-black">
+	  <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
@@ -110,14 +110,100 @@ Containers are made possible by process isolation and virtualization capabilitie
     </div>
   </div>
 </nav>
+ 
+	  
+	  <div class="tc-l pv3 ph3 ph4-ns" style="padding-top: 8rem;">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/fira-sans.min.css"> 
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> 
+				<script>
+					
+				  function top() {
+					    document.getElementById( 'top' ).scrollIntoView();    
+				  };
 
-      <div class="tc-l pv6 ph3 ph4-ns">
-        
-		<div class="f2 f1-l fw2 white-90 mb0 lh-title"> <h1 class="f2 f-subheadline-l fw2 white-90 lh-title "><h1>&nbsp; .. </h1></h1></div>
-          
-        
-      </div>
-    </div>
+				  function bottom() {
+						window.setTimeout( function () { top(); }, 1000 );
+					    document.getElementById( 'bottom' ).scrollIntoView();
+				  };
+
+				  bottom();
+
+				</script>
+
+				<style>
+
+.wrapper {
+  height: 20vh;
+   
+  display: grid;
+  place-items: center;
+}
+
+				  .typing-demo {
+					width: 13ch;
+					animation: typing 1s steps(29) ;  
+					white-space: nowrap;
+					overflow: hidden;
+					 
+					  
+					font-family: IBM Plex Mono;
+					 
+					 
+					 
+					font-size: 1em;
+					color: white;
+					position: absolute;
+				  }
+
+				  .typing-demo:after{
+
+					content: '_';
+					animation: blink .5s step-end infinite alternate;
+					height: 100%;
+					width: 40px;
+					position: absolute;
+					right: 0;
+					top: 0;
+					color: white;
+					background: black;
+				  }
+
+				  @keyframes typing {
+					from {
+					  width: 0
+					}
+				  }
+
+				  @keyframes blink {
+					50% {
+					   
+					  background: transparent;
+					  color: transparent;
+					}
+					100% {
+
+					
+					}
+				  }
+
+				</style>  
+		
+
+		<h1 class="f2 f-subheadline-l fw2 light-silver lh-title">
+		  
+		  <div class="wrapper">
+			<div class="typing-demo" id="top">
+			  ~Docker 
+			</div>
+		  </div>
+
+		  
+		</h1>
+		
+	  </div>
+	</div>
+
+ 
   </header>
 
 

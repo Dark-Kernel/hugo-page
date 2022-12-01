@@ -109,9 +109,91 @@
  
 	  
 	  <div class="tc-l pv3 ph3 ph4-ns" style="padding-top: 8rem;">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/fira-sans.min.css"> 
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> 
+				<script>
+					
+				  function top() {
+					    document.getElementById( 'top' ).scrollIntoView();    
+				  };
+
+				  function bottom() {
+						window.setTimeout( function () { top(); }, 1000 );
+					    document.getElementById( 'bottom' ).scrollIntoView();
+				  };
+
+				  bottom();
+
+				</script>
+
+				<style>
+
+.wrapper {
+  height: 20vh;
+   
+  display: grid;
+  place-items: center;
+}
+
+				  .typing-demo {
+					width: 13ch;
+					animation: typing 1s steps(29) ;  
+					white-space: nowrap;
+					overflow: hidden;
+					 
+					  
+					font-family: IBM Plex Mono;
+					 
+					 
+					 
+					font-size: 1em;
+					color: white;
+					position: absolute;
+				  }
+
+				  .typing-demo:after{
+
+					content: '_';
+					animation: blink .5s step-end infinite alternate;
+					height: 100%;
+					width: 40px;
+					position: absolute;
+					right: 0;
+					top: 0;
+					color: white;
+					background: black;
+				  }
+
+				  @keyframes typing {
+					from {
+					  width: 0
+					}
+				  }
+
+				  @keyframes blink {
+					50% {
+					   
+					  background: transparent;
+					  color: transparent;
+					}
+					100% {
+
+					
+					}
+				  }
+
+				</style>  
+		
+
 		<h1 class="f2 f-subheadline-l fw2 light-silver lh-title">
 		  
-		  &nbsp;~ CronJob
+		  <div class="wrapper">
+			<div class="typing-demo" id="top">
+			  ~CronJob 
+			</div>
+		  </div>
+
+		  
 		</h1>
 		
 	  </div>
