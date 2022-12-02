@@ -1,7 +1,7 @@
 ---
 title: "Home"
 menu: home
-featured_image: '/2-linux-og3.jpg'
+featured_image: '2-linux-og3.jpg'
 ---
 
 
@@ -98,7 +98,7 @@ body{
 
 <div class = "container">
   <h1>Hi, I'm</h1>
-  <h1>Sumit Patel.</h1>
+  <h1>Sumit.</h1>
 </div>
 
 </body>
