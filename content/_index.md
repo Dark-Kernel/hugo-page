@@ -1,7 +1,7 @@
 ---
 title: "Home"
 menu: home
-featured_image: '2-linux-og3.jpg'
+featured_image: '/linux-7.png'
 ---
 
 
@@ -22,18 +22,40 @@ body{
   margin-top: 100px;
 }
 
+
+ @media screen and (min-width: 60em)
+.pv6-l {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+.pv4 {
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+/*.pv4{
+
+	padding-top: 0rem;
+}
+.pv6-l{
+
+	padding-bottom: 8rem;
+
+}*/
+
 .container h1:nth-child(1) {
   color: #355c7d;
   font-family: 'Fira Code', monospace;
   font-weight: 800;
   font-size: 20px;
-  margin: 0 0 0 35%;
-  text-align: left;
+  margin: 0 0 0 0;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  width: 170px;
+  width: 350px;
   animation: type 1.5s steps(30,end) forwards;
 }
+
 
 .container h1:nth-child(2) {
   opacity: 0;
@@ -43,10 +65,12 @@ body{
   background: linear-gradient(to right, #000000, #434343 );/
   font-weight: 800;
   font-size: 100px;  
-  width: 430px;
+  width: 329px;
+  text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   overflow: hidden;
+	overflow-x: hidden;
   animation: shring-animation 2.1s steps(30,end) 1.5s forwards, blink .5s step-end infinite alternate;
 }
 
@@ -78,7 +102,7 @@ body{
     width: 0;
   }
   1%, 99%{
-    border-right: 1px solid orange;
+    border-right: 2px solid orange;
   }
   100%{
     border-right: none;
@@ -98,7 +122,7 @@ body{
 
 <div class = "container">
   <h1>Hi, I'm</h1>
-  <h1>Sumit.</h1>
+  <h1>Sumit</h1>
 </div>
 
 </body>
