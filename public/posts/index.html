@@ -192,6 +192,85 @@
 	color: white;
 }
 
+
+
+.relative.w-100.w-30-l.mb4.bg-white{
+
+	pointer-events: auto;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 150ms ease-in-out;
+	display: flex;
+    flex-direction: column;
+
+}
+.relative.w-100.w-30-l.mb4.bg-white:hover{
+
+  	transform: scale(1.05);
+  	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  	z-index: 10;
+	    	
+}
+
+
+.relative.w-100.w-30-l.mb4.bg-white:hover .black{
+	
+	font-size: 1.4em;
+	width: 100%;
+	transform-origin: bottom right;
+	text-shadow: 1px 1px 1px #000;
+	transition: transform 0.25s ease-out;
+
+
+}
+
+.relative.w-100.w-30-l.mb4.bg-white:hover hr{
+		
+  	font-size: 1.4em;
+  	-webkit-filter: drop-shadow(hsla(0, 0%, 0%, 0.75) 1px 3px 5px);
+	width: 100%;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	transform: scaleX(0);
+	transform: scaleX(1);
+	
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+}
+
+.relative.w-100.w-30-l.mb4.bg-white:hover hr{
+		
+	border: 1px inset black;
+	position: relative;
+}
+
+  
+.relative.w-100.w-30-l.mb4.bg-white:hover hr:after{
+	
+	 transform: scaleX(1);
+     transform-origin: bottom left;
+
+}
+
+
+aside:hover > .relative.w-100.w-30-l.mb4.bg-white:not(:hover){
+
+ filter: blur(2.5px);
+  -webkit-filter: blur(2.5px);
+  
+
+}
+	
+
+.dim:focus, .dim:hover {
+  opacity: 1;
+}
+
+.cards:hover > .card:not(:hover) {
+}
+
 </style>
 
 
