@@ -116,6 +116,14 @@ body{
 }
 
 
+.resume{
+	
+	font-size: 2rem;
+	color: #355c7d;
+	
+
+}
+
 </style>
 
 <body>
@@ -124,7 +132,13 @@ body{
   <h1>Hi, I'm</h1>
   <h1>Sumit</h1>
 </div>
-
+<br><br>
+<div class="resume" >
+	Download my resume
+<div>
+<div>
+	<button name="submit" type="submit" ><a href="/sumit-p.pdf">View</a></button>
+<div>
 </body>
 
 {{< /rawhtml3 >}}

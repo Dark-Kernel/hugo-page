@@ -24,6 +24,7 @@ title: "$ ls blogs"
     transition: all 150ms ease-in-out;
 	display: flex;
     flex-direction: column;
+	border-radius: 10%;
 
 }
 .relative.w-100.w-30-l.mb4.bg-white:hover{
@@ -39,7 +40,7 @@ title: "$ ls blogs"
 	
 	font-size: 1.4em;
 	width: 100%;
-	transform-origin: bottom right;
+	transform-origin: bottom ;
 	text-shadow: 1px 1px 1px #000;
 	transition: transform 0.25s ease-out;
 
@@ -49,14 +50,13 @@ title: "$ ls blogs"
 .relative.w-100.w-30-l.mb4.bg-white:hover hr{
 		
   	font-size: 1.4em;
-  	-webkit-filter: drop-shadow(hsla(0, 0%, 0%, 0.75) 1px 3px 5px);
+  	-webkit-filter: drop-shadow(hsla(0, 0%, 0%, 0.10) 1px 2px 2px);
 	width: 100%;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
-	transform: scaleX(0);
-	transform: scaleX(1);
-	
-	height: 2px;
+	transform-origin: bottom center;
+	transform: scaleX(0.5);
+	transition: transform 0.70s ease;
+	align: center;
+	height: 1.5px;
 	bottom: 0;
 	left: 0;
 	background-color: black;
@@ -92,6 +92,10 @@ aside:hover > .relative.w-100.w-30-l.mb4.bg-white:not(:hover){
 
 .cards:hover > .card:not(:hover) {
 }
+
+
+
+
 
 </style>
 

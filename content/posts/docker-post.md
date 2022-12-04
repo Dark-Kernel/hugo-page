@@ -6,7 +6,7 @@ post_image: "/docker-logo.png"
 ---
 
 
-## Docker 
+# Docker 
 
 
 Docker is an open source containerization platform. It
@@ -29,19 +29,21 @@ capabilities built into the Linux kernel.
 
 ~ Arch
 
-`yay -S docker-git`
+	yay -S docker-git
 
 ~ Debian
 
-`sudo apt install docker.io`
+	sudo apt install docker.io
 
 OR
 
-visit https://download.docker.com/linux/debian/dists/
+visit 
+	https://download.docker.com/linux/debian/dists/
 choose your version, browse to pool/stable/ choose your architecture
-Download .deb file
 
-`sudo dpkg -i path/to/installed-file.deb`
+~ Download .deb file
+
+	sudo dpkg -i path/to/installed-file.deb
 
 
 
@@ -56,12 +58,12 @@ After Installation if you face soms problem like below:
 
  1.Add your self to the docker group
 
-    `usermod -aG docker $USER`
+    usermod -aG docker $USER
 
  2.Fix permissions on docker socker and command.
 
-    `sudo chgrp docker /usr/bin/docker`
-    `sudo chgrp docker /var/run/docker.sock`
+    sudo chgrp docker /usr/bin/docker
+    sudo chgrp docker /var/run/docker.sock
 
      ~$ ll $(which docker)
         -rwxr-xr-x 1 root docker 18991768 08.07.2017 22:57 /usr/bin/docker*
@@ -71,11 +73,11 @@ After Installation if you face soms problem like below:
 
  3.Add variables to config environment for docker command
 
-    `export DOCKER_HOST=unix:///var/run/docker.sock`
+    export DOCKER_HOST=unix:///var/run/docker.sock
 
  4.Rest Docker
 
-    `sudo systemctl restart docker`
+    sudo systemctl restart docker
 
 
 This should fix the error.
@@ -83,6 +85,8 @@ This should fix the error.
 
 
 ## Run
+
+
 
 Lets run the hello-world:
   
@@ -111,7 +115,6 @@ Lets run the hello-world:
 
 Now you will be on your centos.
 
-
 <br>
 
-**Thanks for reading.**
+## **Thanks for reading.**

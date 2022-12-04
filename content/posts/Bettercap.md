@@ -6,7 +6,7 @@ author: "Dark-Kernel"
 post_image: "https://www.bettercap.org/logo.png"
 ---
 
-## Bettercap Framework
+# Bettercap Framework
 
 
 Bettercap is a powerfull, easily extensible and portable framework written in Go which aims to offer to security researches, redteamers and reverse engineers an easy to use, all-in-one solution with all the features they might possibly need for performing reconnaissance and attacking WiFi networks, Bluetooth Low Energy devices, wireless HID devices and IPv4/IPv6 networks.
@@ -84,7 +84,7 @@ Now you will get all the data where the target visits. including the credentials
 
 
 # 
-# **We can use web view also**
+## We can use web view also
 
    1. First install ui
 
@@ -98,5 +98,5 @@ Now you will get all the data where the target visits. including the credentials
 
 
         
-# **Thanks for reading.**
+## **Thanks for reading.**
 
