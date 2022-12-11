@@ -42,7 +42,7 @@ Containers are made possible by process isolation and virtualization capabilitie
 <meta itemprop="description" content="Docker Docker is an open source containerization platform. It enables developers to package applications into containers—standardized executable components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any environment. Containers simplify delivery of distributed applications, and have become increasingly popular as organizations shift to cloud-native development and hybrid multicloud environments.
 Containers are made possible by process isolation and virtualization capabilities built into the Linux kernel."><meta itemprop="datePublished" content="2022-07-07T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-07-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="265">
+<meta itemprop="wordCount" content="266">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
 <meta name="twitter:description" content="Docker Docker is an open source containerization platform. It enables developers to package applications into containers—standardized executable components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any environment. Containers simplify delivery of distributed applications, and have become increasingly popular as organizations shift to cloud-native development and hybrid multicloud environments.
@@ -247,7 +247,7 @@ Containers are made possible by process isolation and virtualization capabilitie
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="docker">Docker</h2>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="docker">Docker</h1>
 <p>Docker is an open source containerization platform. It
 enables developers to package applications into containers—standardized
 executable components combining application source code with the
@@ -261,14 +261,18 @@ multicloud environments.</p>
 capabilities built into the Linux kernel.</p>
 <h2 id="installation">Installation</h2>
 <p>~ Arch</p>
-<p><code>yay -S docker-git</code></p>
+<pre><code>yay -S docker-git
+</code></pre>
 <p>~ Debian</p>
-<p><code>sudo apt install docker.io</code></p>
+<pre><code>sudo apt install docker.io
+</code></pre>
 <p>OR</p>
-<p>visit <a href="https://download.docker.com/linux/debian/dists/">https://download.docker.com/linux/debian/dists/</a>
-choose your version, browse to pool/stable/ choose your architecture
-Download .deb file</p>
-<p><code>sudo dpkg -i path/to/installed-file.deb</code></p>
+<p>visit
+<a href="https://download.docker.com/linux/debian/dists/">https://download.docker.com/linux/debian/dists/</a>
+choose your version, browse to pool/stable/ choose your architecture</p>
+<p>~ Download .deb file</p>
+<pre><code>sudo dpkg -i path/to/installed-file.deb
+</code></pre>
 <h2 id="error-fixing">Error fixing</h2>
 <p>After Installation if you face soms problem like below:</p>
 <pre><code> tcp://localhost:2375/usr/lib/systemd/system/docker.socket.
@@ -276,11 +280,11 @@ Download .deb file</p>
 </code></pre>
 <p><strong>Then here is the solution :</strong></p>
 <p>1.Add your self to the docker group</p>
-<pre><code>`usermod -aG docker $USER`
+<pre><code>usermod -aG docker $USER
 </code></pre>
 <p>2.Fix permissions on docker socker and command.</p>
-<pre><code>`sudo chgrp docker /usr/bin/docker`
-`sudo chgrp docker /var/run/docker.sock`
+<pre><code>sudo chgrp docker /usr/bin/docker
+sudo chgrp docker /var/run/docker.sock
 
  ~$ ll $(which docker)
     -rwxr-xr-x 1 root docker 18991768 08.07.2017 22:57 /usr/bin/docker*
@@ -289,10 +293,10 @@ Download .deb file</p>
     srw-rw---- 1 root docker 0 23.07.2017 10:21 /var/run/docker.sock
 </code></pre>
 <p>3.Add variables to config environment for docker command</p>
-<pre><code>`export DOCKER_HOST=unix:///var/run/docker.sock`
+<pre><code>export DOCKER_HOST=unix:///var/run/docker.sock
 </code></pre>
 <p>4.Rest Docker</p>
-<pre><code>`sudo systemctl restart docker`
+<pre><code>sudo systemctl restart docker
 </code></pre>
 <p>This should fix the error.</p>
 <h2 id="run">Run</h2>
@@ -316,7 +320,7 @@ Download .deb file</p>
 </code></pre>
 <p>Now you will be on your centos.</p>
 <!-- raw HTML omitted -->
-<p><strong>Thanks for reading.</strong></p>
+<h2 id="thanks-for-reading"><strong>Thanks for reading.</strong></h2>
 <ul class="pa0">
   
 </ul>
