@@ -77,6 +77,22 @@ title: "$ ls blogs"
 }
 
 
+.relative.w-100.w-30-l.mb4.bg-white::before hr:after{
+	
+	transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+
+}
+
+	
+.relative.w-100.w-30-l.mb4.bg-white:hover::before hr:after{
+
+	transform-origin: left;
+  transform: scaleX(1);
+
+}
+
 aside:hover > .relative.w-100.w-30-l.mb4.bg-white:not(:hover){
 
  filter: blur(2.5px);

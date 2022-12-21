@@ -23,7 +23,8 @@ multicloud environments.
 
 
 Containers are made possible by process isolation and virtualization 
-capabilities built into the Linux kernel.
+capabilities built into the Linux kernel. Docker provides wide range of 
+prebuild containers which can be used in our custom image to make work easy.
 
 ## Installation 
 

@@ -120,9 +120,62 @@ body{
 	
 	font-size: 2rem;
 	color: #355c7d;
+}
+
+.resb{
 	
+	padding: 7px;
+	background-color: white;
+ 	font-size: 1.2rem;
+	border: 2px solid black;	
+	border-radius: 4px;
+}
+
+.resb:hover{
+	
+	color: white;
+	background-color: black;
 
 }
+
+.resl {
+  background-image: linear-gradient(
+    to right,
+    #355c7d,
+    #355c7d 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.resl:before{
+  content: '';
+  background: #355c7d;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.resl:hover {
+ background-position: 0;
+}
+
+.resl:hover::before{
+  width: 100%;
+}
+
+
 
 </style>
 
@@ -134,11 +187,10 @@ body{
 </div>
 <br><br>
 <div class="resume" >
-	Download my resume
-<div>
-<div>
-	<button name="submit" type="submit" ><a href="/sumit-p.pdf">View</a></button>
-<div>
+	<a class="resl" href="/sumit-p.pdf" target="_blank" >
+	Resume
+	</a>
+</div>
 </body>
 
 {{< /rawhtml3 >}}
