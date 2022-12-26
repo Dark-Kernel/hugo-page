@@ -117,10 +117,11 @@
 }
 
 		  .typing-demo {
-			width: 11ch;
+			width: 11ch;				
 			animation: typing 1s steps(29) ;  
 			white-space: nowrap;
 			overflow: hidden;
+			padding-right: 3.5rem;
 			 
 			  
 			font-family: IBM Plex Mono;
@@ -137,14 +138,13 @@
 			content: '_';
 			animation: blink .5s step-end infinite alternate;
 			height: 100%;
-			width: 40px;
 			position: absolute;
 			right: 0;
 			top: 0;
 			color: white;
 			background: black;
 		  }
-
+	
 		  @keyframes typing {
 			from {
 			  width: 0

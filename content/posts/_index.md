@@ -21,10 +21,10 @@ title: "$ ls blogs"
 	pointer-events: auto;
     transform: scale(1);
     opacity: 1;
-    transition: all 150ms ease-in-out;
+    transition: all 80ms ease-in;
 	display: flex;
     flex-direction: column;
-	border-radius: 10%;
+	border-radius: 3%;
 
 }
 .relative.w-100.w-30-l.mb4.bg-white:hover{
@@ -38,10 +38,9 @@ title: "$ ls blogs"
 
 .relative.w-100.w-30-l.mb4.bg-white:hover .black{
 	
-	font-size: 1.4em;
+	font-size: 1.2em;
 	width: 100%;
 	transform-origin: bottom ;
-	text-shadow: 1px 1px 1px #000;
 	transition: transform 0.25s ease-out;
 
 
