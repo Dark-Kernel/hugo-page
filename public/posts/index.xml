@@ -6,7 +6,37 @@
     <description>Recent content in $ ls blogs on Dark-Kernel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://patel-sumit.web.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Apr 2023 18:48:01 +0530</lastBuildDate><atom:link href="https://patel-sumit.web.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible</title>
+      <link>https://patel-sumit.web.app/posts/ansible/</link>
+      <pubDate>Fri, 07 Apr 2023 18:48:01 +0530</pubDate>
+      
+      <guid>https://patel-sumit.web.app/posts/ansible/</guid>
+      <description>What is ansible? It is a automation tool.
+uses:
+configuration Install applications on server configuring firewall on server/VMs we can configure multiple things in one single playbook, like: db,server, etc. needs:
+Uses ssh for the connectivity, no agent needed. Environment setup Using virtual to setup one ansible main machine and two other which will act as server. we will be creating first an template machine and then will clone it for new.</description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://patel-sumit.web.app/posts/docker-compose/</link>
+      <pubDate>Sun, 01 Jan 2023 20:10:49 +0530</pubDate>
+      
+      <guid>https://patel-sumit.web.app/posts/docker-compose/</guid>
+      <description>Terraform Terraform is a infrastructure as a code tool to build an define cloud structure as well as onprem resources with json like easy to read configuration files. It can manage from low-level components to high-level components.</description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://patel-sumit.web.app/posts/terraform/</link>
+      <pubDate>Sun, 01 Jan 2023 20:10:49 +0530</pubDate>
+      
+      <guid>https://patel-sumit.web.app/posts/terraform/</guid>
+      <description>Terraform Terraform is a infrastructure as a code tool to build an define cloud structure as well as onprem resources with json like easy to read configuration files. It can manage from low-level components to high-level components.</description>
+    </item>
+    
     <item>
       <title>Docker</title>
       <link>https://patel-sumit.web.app/posts/docker-post/</link>

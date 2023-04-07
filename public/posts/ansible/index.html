@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ansible | Dark-Kernel</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="What is ansible? It is a automation tool.
+uses:
+configuration Install applications on server configuring firewall on server/VMs we can configure multiple things in one single playbook, like: db,server, etc. needs:
+Uses ssh for the connectivity, no agent needed. Environment setup Using virtual to setup one ansible main machine and two other which will act as server. we will be creating first an template machine and then will clone it for new.">
+    <meta name="generator" content="Hugo 0.110.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Ansible" />
+<meta property="og:description" content="What is ansible? It is a automation tool.
+uses:
+configuration Install applications on server configuring firewall on server/VMs we can configure multiple things in one single playbook, like: db,server, etc. needs:
+Uses ssh for the connectivity, no agent needed. Environment setup Using virtual to setup one ansible main machine and two other which will act as server. we will be creating first an template machine and then will clone it for new." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://patel-sumit.web.app/posts/ansible/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-07T18:48:01+05:30" />
+<meta property="article:modified_time" content="2023-04-07T18:48:01+05:30" />
+<meta itemprop="name" content="Ansible">
+<meta itemprop="description" content="What is ansible? It is a automation tool.
+uses:
+configuration Install applications on server configuring firewall on server/VMs we can configure multiple things in one single playbook, like: db,server, etc. needs:
+Uses ssh for the connectivity, no agent needed. Environment setup Using virtual to setup one ansible main machine and two other which will act as server. we will be creating first an template machine and then will clone it for new."><meta itemprop="datePublished" content="2023-04-07T18:48:01+05:30" />
+<meta itemprop="dateModified" content="2023-04-07T18:48:01+05:30" />
+<meta itemprop="wordCount" content="462">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ansible"/>
+<meta name="twitter:description" content="What is ansible? It is a automation tool.
+uses:
+configuration Install applications on server configuring firewall on server/VMs we can configure multiple things in one single playbook, like: db,server, etc. needs:
+Uses ssh for the connectivity, no agent needed. Environment setup Using virtual to setup one ansible main machine and two other which will act as server. we will be creating first an template machine and then will clone it for new."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header class="cover bg-top" >
+
+	<div class="pb3-m pb6-l bg-black">
+	  <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Dark-Kernel
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home page">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Blogs page">
+              Blogs
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+       </ul>
+	  
+ 
+	
+
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+ 
+	  
+	  <div class="tc-l pv3 ph3 ph4-ns" style="padding-top: 8rem;">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/fira-sans.min.css"> 
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css"> 
+				<script>
+					
+				  function top() {
+					    document.getElementById( 'top' ).scrollIntoView();    
+				  };
+
+				  function bottom() {
+						window.setTimeout( function () { top(); }, 1000 );
+					    document.getElementById( 'bottom' ).scrollIntoView();
+				  };
+
+				  bottom();
+
+				</script>
+
+				<style>
+
+.wrapper {
+  height: 20vh;
+   
+  display: grid;
+  place-items: center;
+}
+
+				  .typing-demo {
+					width: 13ch;
+					animation: typing 1s steps(29) ;  
+					white-space: nowrap;
+					overflow: hidden;
+					 
+					  
+					font-family: IBM Plex Mono;
+					 
+					 
+					 
+					font-size: 1em;
+					color: white;
+					position: absolute;
+				  }
+
+				  .typing-demo:after{
+
+					content: '_';
+					animation: blink .5s step-end infinite alternate;
+					height: 100%;
+					width: 40px;
+					position: absolute;
+					right: 0;
+					top: 0;
+					color: white;
+					background: black;
+				  }
+
+				  @keyframes typing {
+					from {
+					  width: 0
+					}
+				  }
+
+				  @keyframes blink {
+					50% {
+					   
+					  background: transparent;
+					  color: transparent;
+					}
+					100% {
+
+					
+					}
+				  }
+
+				</style>  
+		
+
+		<h1 class="f2 f-subheadline-l fw2 light-silver lh-title">
+		  
+		  <div class="wrapper">
+			<div class="typing-demo" id="top">
+			  ~Ansible 
+			</div>
+		  </div>
+
+		  
+		</h1>
+		
+	  </div>
+	</div>
+
+ 
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+<style>
+.pr4-l {
+  text-align: justify;
+}
+
+.w-two-thirds-l {
+  width: 100.00%;
+}
+
+ h1{
+  text-align: center;
+  font-family: avenir next,avenir,sans-serif;
+  font-size: 3rem;
+ }
+ p{
+
+ }
+ 
+
+ .pre{
+
+  background-color: #222;
+  color: #ddd;
+  white-space: pre;
+  hyphens: none;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+ 
+
+ .tracked{
+
+  padding-left: 0px;
+ }
+
+ .mw8 {
+  max-width: 60rem;
+}
+
+		  p > img{
+  
+			align-content: "center";
+			display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  		  }
+
+		  .myicons{
+
+			margin: 0;
+			padding-left: 15rem;
+			display: ruby-text;
+			padding-top: 20px;
+
+		  }
+
+
+		  hr{
+			margin-top: -1.5em
+
+		  }
+
+		  .w-100{
+
+			width: 100%;
+			height: 71px;
+
+		  }
+  
+
+</style>
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+		  
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+	  <br>
+
+      <h1 class="f1 athelas mt3 mb1">
+		
+      </h1>
+      
+      <p class="tracked">
+        By <strong>Dark-Kernel</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-04-07T18:48:01+05:30">April 7, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="what-is-ansible">What is ansible?</h1>
+<h6 id="heading"></h6>
+<!-- raw HTML omitted -->
+<p>It is a automation tool.</p>
+<p>uses:</p>
+<ul>
+<li>configuration</li>
+<li>Install applications on server</li>
+<li>configuring firewall on server/VMs</li>
+<li>we can configure multiple things in one single playbook, like: db,server, etc.</li>
+</ul>
+<p>needs:</p>
+<ul>
+<li>Uses ssh for the connectivity, no agent needed.</li>
+</ul>
+<h2 id="environment-setup">Environment setup</h2>
+<p>Using virtual to setup one ansible main machine and two other which will act as server. we will be creating first an template machine and then will clone it for new.</p>
+<p>Template machine -</p>
+<ol>
+<li>visit <a href="https://www.osboxes.org/virtualbox-images/">osboxes</a> to get preconfigured image</li>
+<li>Download the centos 7.</li>
+<li>Extract the downloaded centos 7z file.</li>
+<li>Open the virtualbox and load the .vhd file of centos.</li>
+<li>Start machine and to login you will get user and pass in same page you install centos7z file in info tab.</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>Ansible-Controller machine:</p>
+<ol>
+<li>Right click on template machine and select create clone.</li>
+<li>Set name <code>ansible-controller</code> and check the reinitialize mac checkbox.</li>
+<li>Select clone type as <code>linked clone</code></li>
+</ol>
+<blockquote>
+<p>Linked clone does not clone enitre virtual machine and consume less space.</p>
+</blockquote>
+<p>Ansible-target1 machine:</p>
+<ol>
+<li>same as above one.</li>
+</ol>
+<h2 id="inventory-file">Inventory file</h2>
+<p>The information about these target system is wrote in an Inventory file. If you do not create a file ansible uses a default Inventory file <code>/etc/ansibile/hosts</code>.
+It is an like an .ini like format, simply number of servers are listed one after the others, we can also group together by defining like <code>[group1]</code> and define the list of servers in a line below and you can have multiple groups in a single Inventory file.</p>
+<ol>
+<li>ansible_hosts : it is Inventory parameter used to specify FQDN or ip address of server.</li>
+<li>ansible_connection : Define how it is going to make connection example through ssh, winrm, localhost, etc</li>
+<li>ansible_ports : Define on which port to connect to, default is 22 for ssh.</li>
+<li>ansible_user: Used to defined the user used to make remote connection like admin, root(default in linux) , etc.</li>
+<li>ansible_ssh_pass: Used to set ssh password for linux.</li>
+</ol>
+<h2 id="ping-test">Ping test</h2>
+<ol>
+<li>create a project directory</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ping-test
+</span></span></code></pre></div><ol start="2">
+<li>create a inventory file</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ping-test 
+</span></span><span style="display:flex;"><span>cat &gt; inventory.txt
+</span></span><span style="display:flex;"><span>target1 ansible_host<span style="color:#f92672">=</span>192.168.0.108 ansible_ssh_pass<span style="color:#f92672">=</span>osboxes.org
+</span></span></code></pre></div><ol start="3">
+<li>Now run it with ansible</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ansible target1 -m ping -i inventory.txt
+</span></span></code></pre></div><ol start="4">
+<li>Output:</li>
+</ol>
+<pre tabindex="0"><code>target1 | SUCCESS =&gt; {
+    &#34;ansible_facts&#34;: {
+        &#34;discovered_interpreter_python&#34;: &#34;/usr/bin/python&#34;
+    },
+    &#34;changed&#34;: false,
+    &#34;ping&#34;: &#34;pong&#34;
+}
+</code></pre><p>If you got error as following</p>
+<pre tabindex="0"><code>target2 | FAILED! =&gt; {
+    &#34;msg&#34;: &#34;Using a SSH password instead of a key is not possible because Host Key checking is enabled and sshpass does not support this.  Please add this host&#39;s fingerprint to your known_hosts file to manage this host.&#34;
+}
+</code></pre><p>Reason: We need to first accept the key fingerprint of taget machine.
+it&rsquo;s the same thing we do when doing a ssh connection and typing yes  when prompted.</p>
+<p>we can fix this with two ways:</p>
+<ol>
+<li>Manually first do an ssh login.</li>
+<li>Uncomment <code>host_key_check</code> in <code>/etc/ansible/ansible.cfg</code>.</li>
+<li>Use ssh keys for login instead of passwords.</li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<br>
+	  <br><h3> <hr></h3>
+	  
+	  <div align="center" class="myicons" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+ 
+
+
+
+
+  
+
+
+
+<style>
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff !important;
+  margin: 0.2em
+}
+
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: middle
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+ 
+.resp-sharing-button__icon {
+  stroke: #fff;
+  fill: none
+}
+
+ 
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+
+.fa-brands, .fa-solid{
+
+  font-weight: 500;
+  color: black;
+  font-size: 2.7rem;
+
+}
+
+.fa-brands:hover, .fa-solid:hover{
+
+  transform: scale(1.2);
+}
+
+
+</style>
+
+<script src="https://kit.fontawesome.com/21e7e643ab.js" crossorigin="anonymous"></script>
+
+
+
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https://patel-sumit.web.app/posts/ansible/" target="_blank" rel="noopener" aria-label="" title="Facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+
+ <i class="fa-brands fa-square-facebook"></i> 
+    </div>
+  </div>
+</a>
+
+
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Ansible&amp;url=https://patel-sumit.web.app/posts/ansible/" target="_blank" rel="noopener" aria-label="" title="Twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+
+<i class="fa-brands fa-square-twitter"></i>
+    </div>
+  </div>
+</a>
+
+
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Ansible&amp;body=https://patel-sumit.web.app/posts/ansible/" target="_self" rel="noopener" aria-label="" title="E-Mail">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+
+<i class="fa-solid fa-envelope"></i>
+    </div>
+  </div>
+</a>
+
+
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://patel-sumit.web.app/posts/ansible/&amp;title=Ansible&amp;summary=Ansible&amp;https://patel-sumit.web.app/posts/ansible/" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+
+<i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
+</a>
+
+
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https://patel-sumit.web.app/posts/ansible/&amp;resubmit=true&amp;title=Ansible" target="_blank" rel="noopener" aria-label="" title="Reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+
+<i class="fa-brands fa-square-reddit"></i>
+    </div>
+  </div>
+</a>
+
+
+
+
+
+
+
+
+
+
+</div>
+	  <br><h3 style="line-height:0;"><hr></h3>
+	  <br>
+      <div id="commento"
+  data-host="https://cusdis.com"
+  data-app-id="10ad90f0-7213-4358-a707-b27946006911"
+  ></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+
+
+      <div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+   
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://patel-sumit.web.app/" >
+    &copy;  Dark-Kernel 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
